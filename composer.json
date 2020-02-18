@@ -17,12 +17,6 @@
         "laminas/laminas-coding-standard": "^1.0"
     },
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Mirko Fenrich",
-            "email": "fenrich@designpark.de"
-        }
-    ],
     "config": {
         "sort-packages": true
     },
