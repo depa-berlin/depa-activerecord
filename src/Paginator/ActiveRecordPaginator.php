@@ -1,7 +1,7 @@
 <?php
 namespace Depa\ActiveRecord\Paginator;
 
-//‚use Depa\Core\DataModel\ActiveRecord\ActiveRecord;
+//use Depa\Core\DataModel\ActiveRecord\ActiveRecord;
 //use Depa\Core\DataModel\ActiveRecord\Paginator\Adapter;
 use Laminas\Paginator\Paginator;
 

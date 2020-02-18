@@ -1,6 +1,7 @@
 <?php
 namespace Depa\ActiveRecord\Traits;
 
+use Depa\ActiveRecord\Validator;
 use Laminas\Db\TableGateway\Feature\RowGatewayFeature;
 use Laminas\Db\TableGateway\TableGateway;
 use Laminas\Db\Sql\Select;
@@ -19,7 +20,7 @@ trait DatabasePersistenceTrait
     /**
      * TableGateway ist eine ZF-Klasse, erlaubt einfachen Zugriff auf Datenbanktabelle.
      *
-     * @var Laminas\Db\TableGateway\TableGateway
+     * @var TableGateway
      */
     protected $tableGateway;
 
@@ -33,7 +34,7 @@ trait DatabasePersistenceTrait
     /**
      * Primary-Keys die zum Finden in der Table benutzt werden können.
      *
-     * @var Array
+     * @var array
      */
     protected $primaryKeys;
 
@@ -47,7 +48,7 @@ trait DatabasePersistenceTrait
     /**
      * Instanz der Validatorklasse
      *
-     * @var Core\Model\ActiveRecord\Validator
+     * @var Validator
      */
     protected static $_validator;
 
@@ -69,7 +70,7 @@ trait DatabasePersistenceTrait
     /**
      * Gibt den DB-Adapter zurück
      *
-     * @return Ambigous <\Laminas\Db\Adapter\AdapterInterface, AdapterInterface>
+     * @return mixed <\Laminas\Db\Adapter\AdapterInterface, AdapterInterface>
      */
     public static function getAdapter()
     {
@@ -99,7 +100,7 @@ trait DatabasePersistenceTrait
      * @param array|null $condition
      * @param bool $single
      * @param null|string|array $sort
-     * @return Ambigous <\Laminas\Db\ResultSet\ResultSet, NULL, \Laminas\Db\ResultSet\ResultSetInterface>
+     * @return mixed <\Laminas\Db\ResultSet\ResultSet, NULL, \Laminas\Db\ResultSet\ResultSetInterface>
      */
     protected static function findByCondition($condition = null, $single = false, $sort = null)
     {
@@ -123,8 +124,8 @@ trait DatabasePersistenceTrait
      * Der Record wird anhand von Bedingungen in Form eines assoziativen Arrays oder einem Primary-Key ermittelt.
      * Wird keine Bedingung angegeben, wird ein beliebiger Record zurückgegeben
      *
-     * @param unknown $condition
-     * @return \Core\Model\ActiveRecord\Ambigous
+     * @param array|null $condition
+     * @return mixed
      */
     public static function find($condition = null)
     {
@@ -235,7 +236,7 @@ trait DatabasePersistenceTrait
     /**
      * Gibt ein Array mit allen Primary-Keys der derzeitigen Klasse zurück.
      *
-     * @return Array:
+     * @return array:
      */
     public static function getPrimaryKeys()
     {

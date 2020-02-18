@@ -1,8 +1,8 @@
 <?php
 namespace Depa\ActiveRecord\Paginator\Adapter;
 
+use Depa\ActiveRecord\ActiveRecord;
 use Laminas\Paginator\Adapter\AdapterInterface;
-use Depa\Core\DataModel\ActiveRecord\ActiveRecord;
 
 /**
  *
@@ -11,10 +11,8 @@ use Depa\Core\DataModel\ActiveRecord\ActiveRecord;
  */
 class ActiveRecordAdapter implements AdapterInterface
 {
-
     /**
-     *
-     * @var \Core\Model\ActiveRecord
+     * @var ActiveRecord
      */
     protected $activeRecord;
 

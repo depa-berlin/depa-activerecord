@@ -4,6 +4,7 @@ namespace Depa\ActiveRecord;
 //use Depa\Core\DataModel\ActiveRecord\ActiveRecord;
 //‚use Depa\Core\DataModel\ActiveRecord\Adapter\ActiveRecordAdapter;
 //use Depa\Core\Api\Hal;
+use Depa\ActiveRecord\Paginator\Adapter\ActiveRecordAdapter;
 use Depa\Stdlib\HalableInterface;
 use Laminas\Paginator\Paginator;
 use Laminas\Diactoros\Uri;
