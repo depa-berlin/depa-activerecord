@@ -16,6 +16,16 @@
     "require-dev": {
         "laminas/laminas-coding-standard": "^1.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Depa\\ActiveRecord\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DepaTest\\ActiveRecord\\": "test/"
+        }
+    },
     "license": "MIT",
     "config": {
         "sort-packages": true
