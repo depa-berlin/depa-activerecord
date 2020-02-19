@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": ">=7.1",
-        "depa/depa-stdlib": "v1.0.0.1",
+        "depa/depa-stdlib": "^1.0",
         "depa/depa-tooling": "^1.0",
         "doctrine/collections": "^1.6",
         "laminas-api-tools/api-tools-api-problem": "^1.3",
